@@ -202,6 +202,7 @@ func (worker *Worker) Work() {
 	var inpack *inPack
 	for inpack = range worker.in {
 		worker.handleInPack(inpack)
+		time.Sleep(1 * time.Second)
 	}
 }
 
